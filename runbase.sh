@@ -87,6 +87,7 @@ funMariadb() {
 		-p3306:3306 \
 		-v$BASEDIR/myserver.cnf:/etc/mysql/mariadb.conf.d/90-server.cnf \
 		-v$BASEDIR/dockerDB:/var/lib/mysql \
+		-v$BASEDIR/ca:/opt/ca \
 		$MDBIMAGE
 	# sleep 1
 	# docker exec $MDBNAME chown mysql:mysql /var/lib/mysql -R
